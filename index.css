@@ -1,0 +1,488 @@
+/* --- FUENTES Y ESTILO GLOBAL --- */
+body {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  background: radial-gradient(circle at center, #ff5fcf, #7a3eff, #1e1e2f);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.glass {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 40px;
+  margin: 20px auto;
+  max-width: 1000px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1.2s ease;
+}
+
+/* NAVBAR */
+header {
+  background: rgba(0,0,0,0.4);
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  z-index: 999;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ff8de2;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 180px 20px 100px;
+}
+
+.hero h1 span {
+  color: #ff8de2;
+}
+
+
+.profile-photo {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  margin-bottom: 10px;
+}
+
+.intro {
+  font-size: 1.1rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.cta-button {
+  text-decoration: none;
+  padding: 14px 30px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.08);
+}
+
+.cta-button {
+  background: #ff69b4;
+}
+
+.cta-button.secondary {
+  background: #9370db;
+}
+
+/* SECCIONES */
+.section-divider {
+  width: 80%;
+  height: 1px;
+  margin: 60px auto;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* TECNOLOGÍAS */
+.tech-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: center;
+  gap: 20px;
+}
+
+.tech-item {
+  background: rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 15px;
+  width: 90px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.tech-item:hover {
+  transform: translateY(-5px);
+}
+
+.tech-item img {
+  width: 75px;
+  height: 45px;
+  margin-bottom: 8px;
+}
+.cert-list{
+  display: flex;
+  flex-direction: row;
+  gap: 20PX;
+}
+
+/* CERTIFICADOS */
+.cert-item {
+  background: rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 15px;
+  width: 200px;
+  transition: transform 0.3s;
+  text-align: center;
+}
+
+.cert-item img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* IDIOMAS */
+.lang-list {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+.lang-list li {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+/* PROYECTOS */
+.project {
+  margin-bottom: 205px;
+}
+.project-video{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.project-video video {
+  width: 60%;
+  max-width: 300px;
+  border-radius: 12px;
+  align-self: center;
+}
+.project-image{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.project-image img{
+  max-width: 300px;
+  width: 60%;
+}
+
+ #icongit{
+  width: 50px;
+  
+}
+#icongit:hover{
+    transform: scale(1.2);
+    transition: transform 0.4s ease;
+
+
+}
+ #urlvideo{
+  text-decoration: none;
+ }
+
+ #iconvideo{
+  font-size: 20px;
+  
+ }
+#urlvideo:hover{
+  transform: scale(1.2);
+}
+
+ #urlgit{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+ }
+ .project-image #urlvideo{
+  text-decoration: none;
+ }
+
+/* CONTACTO */
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 20px;
+}
+
+.contact-icons img {
+  width: 80px;
+  height: 80px;
+  transition: transform 0.3s;
+}
+
+.contact-icons img:hover {
+  transform: scale(1.2);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* ANIMACIONES */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.subtitle-role {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ff8de2;
+  margin: 15px 0 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(255, 105, 180, 0.6);
+  animation: glowText 2.5s ease-in-out infinite alternate;
+}
+
+/* Animación de brillo suave */
+@keyframes glowText {
+  0% { text-shadow: 0 0 10px rgba(255, 105, 180, 0.4); transform: scale(1); }
+  50% { text-shadow: 0 0 25px rgba(255, 105, 180, 0.9); transform: scale(1.03); }
+  100% { text-shadow: 0 0 10px rgba(255, 105, 180, 0.4); transform: scale(1); }
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .subtitle-role {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+}
+
+/* --- FORMACIÓN ACADÉMICA --- */
+.education {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.timeline {
+  position: relative;
+  margin: 40px auto;
+  max-width: 700px;
+  padding-left: 20px;
+  border-left: 3px solid rgba(255, 105, 180, 0.5);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 30px;
+  animation: fadeSlideUp 1.2s ease both;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -10px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, #ff8de2, #b47bff);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.8);
+}
+
+.timeline-content {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+}
+
+.timeline-content h3 {
+  color: #810f64;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.timeline-content p {
+  font-size: 0.95rem;
+  color: #ddd;
+  margin: 0;
+}
+
+/* Animación de aparición */
+@keyframes fadeSlideUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+/* --- ENTORNOS DE DESARROLLO --- */
+.tools {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.tool-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 25px 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tool-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 0 25px rgba(255, 105, 180, 0.6);
+}
+
+.tool-card img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 15px;
+  transition: transform 0.4s ease;
+}
+
+.tool-card:hover img {
+  transform: rotate(10deg) scale(1.1);
+}
+
+.tool-card h3 {
+  color: 0;
+  font-size: 1rem;
+  margin-top: 5px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.experience {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.experience-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 30px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(255, 105, 180, 0.6);
+}
+
+.experience-card h3 {
+  font-size: 1.2rem;
+  color: #ff8de2;
+  margin-bottom: 15px;
+}
+
+.experience-card ul {
+  text-align: left;
+  margin: 0 auto;
+  padding-left: 20px;
+  max-width: 700px;
+}
+
+.experience-card ul li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  color: #fff;
+}
+#idioma{
+  color: #810f64;
+  font-weight: bolder;
+}
+/* ----- Lightbox para certificados ----- */
+.modal {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 20px;
+  left: 20%;
+  top: 20%;
+  width: 60%;
+  height: 60%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+  display: none;
+
+  
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 60%;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.modal-content:hover {
+  transform: scale(1.02);
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  color: rgb(0, 0, 0);
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.close:hover {
+  color: #ff5555;
+}
