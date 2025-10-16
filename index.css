@@ -486,3 +486,77 @@ footer {
 .close:hover {
   color: #ff5555;
 }
+@media(max-width:600px ){
+ body{
+  width: 100%;
+  overflow-x: hidden;
+ }
+ header{
+  padding: 20px;
+ }
+ .glass{
+  padding: 10px 2px;
+  
+ }
+ .profile-photo {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  margin-bottom: 10px;
+}
+.nav-links {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: center;
+}
+.hero {
+  text-align: center;
+  padding: 110px 15px 60px;
+}
+.tech-icons{
+  gap : 7px 10px;
+}
+.tech-item{
+  max-width: 70px;
+  padding: 15px;
+}
+.skills h2{
+  text-align:  center;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.contact-icons img{
+  width: 70px;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 10px;
+  left: 5%;
+  top: 5%;
+  width: 90%;
+  height: 60%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+  display: none;
+
+  
+}
+
+.cert-item{
+  width: 100px;
+}
+
+
+}
