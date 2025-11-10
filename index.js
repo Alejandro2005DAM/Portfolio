@@ -210,3 +210,21 @@ item.onclick=(e)=>{
     
 })
 
+
+const downloadCV=document.querySelector(".cta-button")
+downloadCV.addEventListener("mousedown",()=>{
+
+  
+    downloadCV.style.color="black"
+    downloadCV.style.borderRadius="12px"
+    downloadCV.classList.add("active")
+
+})
+
+downloadCV.addEventListener("mouseup",()=>{
+
+    downloadCV.style.color="white"
+    downloadCV.style.borderRadius="12px"
+    downloadCV.classList.remove("active")
+})
+
