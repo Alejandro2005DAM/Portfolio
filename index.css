@@ -327,30 +327,10 @@ background-color: transparent;
   position: relative;
   display: inline-block;
   overflow: hidden;
-  animation: typing 4s steps(100, end) forwards
-    blink-caret 0.75s step-end infinite;
-    animation-iteration-count: infinite;
-    animation-direction: normal;
+  white-space: nowrap;
+
 }
 
-@keyframes typing{
-  from{
-    width: 0;
-    opacity: 0;
-  }
-  to{
-    width: 100%;
-    opacity: 1;
-  }
-}
-@keyframes blink-caret{
-  from{
-    border-color: transparent;
-  }
-  to{
-    border-color: var(--primary-color);
-  }
-}
 
 .hero-description p {
   font-size: 1.125rem;
@@ -452,7 +432,6 @@ background-color: transparent;
 
 .cta-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
 }
 
 .cta-button:active {
@@ -468,15 +447,8 @@ background-color: transparent;
   transform: translateX(3px);
 }
 
-.cta-button.secondary {
-  background: transparent;
-  border: 2px solid var(--primary-color);
-  color: var(--primary-color);
-}
 
-.cta-button.secondary::before {
-  background: transparent;
-}
+
 
 .cta-button.secondary:hover {
   background: rgba(99, 102, 241, 0.1);
@@ -781,9 +753,13 @@ footer {
   color: #ff8de2;
   margin: 15px 0 10px;
   letter-spacing: 3px;
+  overflow: hidden;
+  white-space: nowrap;
   text-transform: uppercase;
   text-shadow: 0 0 10px rgba(255, 105, 180, 0.6);
-  animation: glowText 2.5s ease-in-out infinite alternate;
+  animation: glowText 2.5s ease-in-out forwards,
+  typing 7s steps(150,end) forwards,
+  blink-caret 0.75s step-end forwards;
 }
 
 /* Animación de brillo suave */
@@ -791,6 +767,21 @@ footer {
   0% { text-shadow: 0 0 10px rgba(255, 105, 180, 0.4); transform: scale(1); }
   50% { text-shadow: 0 0 25px rgba(255, 105, 180, 0.9); transform: scale(1.03); }
   100% { text-shadow: 0 0 10px rgba(255, 105, 180, 0.4); transform: scale(1); }
+}
+
+@keyframes typing{
+  from{
+    width: 0;
+    opacity: 0;
+  }
+  to{
+    width: 100%;
+    opacity: 1;
+  }
+}
+@keyframes blink-caret{
+  from, to { border-color: transparent; }
+  50% { border-color: var(--primary-color); }
 }
 
 /* Responsivo */
