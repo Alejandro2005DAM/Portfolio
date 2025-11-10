@@ -37,7 +37,10 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 16px;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  height: 100%;
 }
 
 body {
@@ -48,8 +51,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  min-height: 100vh;
+  min-height: 100%;
+  height: 100%;
   position: relative;
+  font-size: 1rem;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -80,7 +88,24 @@ img {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 var(--spacing-unit);
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Asegurar que las imágenes y elementos embebidos sean responsivos */
+img, video, iframe, object, embed {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Mejorar el escalado de fuentes en Chrome */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 }
 
 /* Fondo con overlay para mejor contraste */
@@ -629,10 +654,6 @@ background-color: transparent;
   font-size: 0,5rem;
   text-align: center;
   transition: transform 0.3s;
-}
-
-.tech-item:hover {
-  transform: translateY(-5px);
 }
 
 .tech-item img {
